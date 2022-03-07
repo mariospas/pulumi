@@ -367,7 +367,7 @@ func TestToOutputAnyDeps(t *testing.T) {
 	assert.Equal(t, URN("foo"), urn)
 	assert.True(t, known)
 	assert.False(t, secret)
-	assert.ElementsMatch(t, []Resource{res}, ro.URN().deps)
+	assert.ElementsMatch(t, []Resource{res}, deps)
 	assert.NoError(t, err)
 }
 
