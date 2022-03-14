@@ -15,8 +15,8 @@
 package migrate
 
 import (
-	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/config"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/config"
 )
 
 // UpToCheckpointV2 migrates a CheckpointV1 to a CheckpointV2.

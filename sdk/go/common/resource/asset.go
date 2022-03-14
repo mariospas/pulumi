@@ -36,8 +36,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/httputil"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/httputil"
 )
 
 const (
@@ -144,7 +144,7 @@ func (a *Asset) IsUserProgramCode() bool {
 //   2. it normalizs the sha hashes we emit so that changes to them don't appear in the diff.
 //   3. it elides the with-capture headers, as changes there are not generally meaningful.
 //
-// TODO(https://github.com/pulumi/pulumi/issues/592) this is baking in a lot of knowledge about
+// TODO(https://github.com/mariospas/pulumi/issues/592) this is baking in a lot of knowledge about
 // pulumi serialized functions.  We should try to move to an alternative mode that isn't so brittle.
 // Options include:
 //   1. Have a documented delimeter format that plan.go will look for.  Have the function serializer

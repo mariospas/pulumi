@@ -22,8 +22,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"pgregory.net/rapid"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	resource_testing "github.com/pulumi/pulumi/sdk/v3/go/common/resource/testing"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
+	resource_testing "github.com/mariospas/pulumi/sdk/v3/go/common/resource/testing"
 )
 
 var marshalOpts = MarshalOptions{

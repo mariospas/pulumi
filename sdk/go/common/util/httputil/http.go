@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/retry"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/retry"
 )
 
 // RetryOpts defines options to configure the retry behavior.

@@ -18,7 +18,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
 )
 
 // Name is an identifier.  It conforms to NameRegexpPattern.

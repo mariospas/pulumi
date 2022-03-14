@@ -26,14 +26,14 @@ import (
 	"github.com/blang/semver"
 	"github.com/pkg/errors"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
+	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optremove"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optremove"
 )
 
 // LocalWorkspace is a default implementation of the Workspace interface.

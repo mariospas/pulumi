@@ -33,17 +33,17 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/config"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/config"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
 )
 
 //go:embed deployments.json
 var deploymentSchema string
 
 // DeploymentSchemaID is the $id for the deployment schema.
-const DeploymentSchemaID = "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/deployments.json"
+const DeploymentSchemaID = "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/deployments.json"
 
 // DeploymentSchema returns a JSON schema that can be used to validate serialized deployments (i.e. `UntypedDeployment`
 // objects).
@@ -55,7 +55,7 @@ func DeploymentSchema() string {
 var resourceSchema string
 
 // ResourceSchemaID is the $id for the deployment schema.
-const ResourceSchemaID = "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/resources.json"
+const ResourceSchemaID = "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/resources.json"
 
 // ResourceSchema returns a JSON schema that can be used to validate serialized resource values (e.g. `ResourceV3`).
 func ResourceSchema() string {
@@ -66,7 +66,7 @@ func ResourceSchema() string {
 var propertyValueSchema string
 
 // PropertyValueSchemaID is the $id for the property value schema.
-const PropertyValueSchemaID = "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
+const PropertyValueSchemaID = "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
 
 // PropertyValueSchema returns a JSON schema that can be used to validate serialized property values.
 func PropertyValueSchema() string {

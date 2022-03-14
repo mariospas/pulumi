@@ -17,8 +17,8 @@ package provider
 import (
 	"context"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
+	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
+	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
 
 	"google.golang.org/grpc"
 )

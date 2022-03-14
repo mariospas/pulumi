@@ -29,14 +29,14 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil/rpcerror"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
-	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/logging"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/rpcutil/rpcerror"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
+	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
 )
 
 // analyzer reflects an analyzer plugin, loaded dynamically for a single suite of checks.

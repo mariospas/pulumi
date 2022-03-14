@@ -20,7 +20,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
 )
 
 func assertDeepEqualsIffEmptyDiff(t *testing.T, val1, val2 PropertyValue) {

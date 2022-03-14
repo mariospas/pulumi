@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/deployments.json",
+    "$id": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/deployments.json",
     "title": "Pulumi Deployment States",
     "description": "A schema for Pulumi deployment states.",
     "type": "object",
@@ -63,7 +63,7 @@
                             "description": "All resources that are part of the stack.",
                             "type": "array",
                             "items": {
-                                "$ref": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/resources.json#v3"
+                                "$ref": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/resources.json#v3"
                             }
                         },
                         "pending_operations": {
@@ -159,7 +159,7 @@
             "properties": {
                 "resource": {
                     "description": "The state of the affected resource as of the start of this operation.",
-                    "$ref": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/resources.json#v3"
+                    "$ref": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/resources.json#v3"
                 },
                 "type": {
                     "description": "A string representation of the operation.",

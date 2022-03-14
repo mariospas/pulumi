@@ -32,18 +32,18 @@ import (
 	"github.com/blang/semver"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/events"
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optdestroy"
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optpreview"
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optrefresh"
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optremove"
-	"github.com/pulumi/pulumi/sdk/v3/go/auto/optup"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/events"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optdestroy"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optpreview"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optrefresh"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optremove"
+	"github.com/mariospas/pulumi/sdk/v3/go/auto/optup"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
+	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
+	"github.com/mariospas/pulumi/sdk/v3/go/pulumi/config"
 )
 
 var pulumiOrg = getTestOrg()
@@ -1044,7 +1044,7 @@ func TestUpsertStackInlineSource(t *testing.T) {
 func TestNestedStackFails(t *testing.T) {
 	t.Parallel()
 
-	// FIXME: see https://github.com/pulumi/pulumi/issues/5301
+	// FIXME: see https://github.com/mariospas/pulumi/issues/5301
 	t.Skip("skipping test, see pulumi/pulumi#5301")
 	testCtx := context.Background()
 	sName := randomStackName()

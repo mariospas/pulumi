@@ -348,7 +348,7 @@ func TestPropertyPathContains(t *testing.T) {
 func TestAddResizePropertyPath(t *testing.T) {
 	t.Parallel()
 
-	// Regression test for https://github.com/pulumi/pulumi/issues/5871:
+	// Regression test for https://github.com/mariospas/pulumi/issues/5871:
 	// Ensure that adding a new element beyond the size of an array will resize it.
 	path, err := ParsePropertyPath("[1]")
 	assert.Nil(t, err)

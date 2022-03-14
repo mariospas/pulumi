@@ -25,8 +25,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rogpeppe/go-internal/lockedfile"
 
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/mariospas/pulumi/sdk/v3/go/common/util/logging"
 )
 
 // PulumiCredentialsPathEnvVar is a path to the folder where credentials are stored.
