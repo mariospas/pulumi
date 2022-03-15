@@ -3,9 +3,9 @@ package apitype
 import (
 	"encoding/json"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/config"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/config"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 )
 
 // PlanDiffV1 is the serializable version of a plan diff.

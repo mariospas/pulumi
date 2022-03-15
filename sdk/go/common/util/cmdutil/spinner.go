@@ -19,7 +19,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/diag/colors"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/diag/colors"
 )
 
 // NewSpinnerAndTicker returns a new Spinner and a ticker that will fire an event when the next call

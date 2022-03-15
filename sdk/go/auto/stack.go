@@ -104,19 +104,19 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/debug"
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/events"
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/optdestroy"
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/optpreview"
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/optrefresh"
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/optup"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/constant"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/rpcutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/debug"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/events"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optdestroy"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optpreview"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optrefresh"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optup"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/constant"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 // Stack is an isolated, independently configurable instance of a Pulumi program.
@@ -133,7 +133,7 @@ type Stack struct {
 // Using this format avoids ambiguity in stack identity guards creating or selecting the wrong stack.
 // Note that filestate backends (local file, S3, Azure Blob) do not support stack names in this
 // format, and instead only use the stack name without an org/user or project to qualify it.
-// See: https://github.com/mariospas/pulumi/issues/2522
+// See: https://github.com/pulumi/pulumi/issues/2522
 func FullyQualifiedStackName(org, project, stack string) string {
 	return fmt.Sprintf("%s/%s/%s", org, project, stack)
 }
@@ -853,7 +853,7 @@ func isNestedInvocation() bool {
 
 		frames := runtime.CallersFrames(callers)
 		for f, more := frames.Next(); more; f, more = frames.Next() {
-			if f.Function == "github.com/mariospas/pulumi/sdk/v3/go/pulumi.RunWithContext" {
+			if f.Function == "github.com/pulumi/pulumi/sdk/v3/go/pulumi.RunWithContext" {
 				return true
 			}
 		}
@@ -862,7 +862,7 @@ func isNestedInvocation() bool {
 
 func startLanguageRuntimeServer(fn pulumi.RunFunc) (*languageRuntimeServer, error) {
 	if isNestedInvocation() {
-		return nil, errors.New("nested stack operations are not supported https://github.com/mariospas/pulumi/issues/5058")
+		return nil, errors.New("nested stack operations are not supported https://github.com/pulumi/pulumi/issues/5058")
 	}
 
 	s := &languageRuntimeServer{

@@ -24,7 +24,7 @@ import (
 	"github.com/rivo/uniseg"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/ciutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/ciutil"
 )
 
 // Emoji controls whether emojis will by default be printed in the output.
@@ -104,7 +104,7 @@ func RemoveTrailingNewline(s string) string {
 func EndKeypadTransmitMode() {
 	if runtime.GOOS != "windows" && Interactive() {
 		// Print an escape sequence to switch the keypad mode, same as 'tput rmkx'.
-		// Work around https://github.com/mariospas/pulumi/issues/3480.
+		// Work around https://github.com/pulumi/pulumi/issues/3480.
 		// A better fix might be fixing upstream https://github.com/AlecAivazis/survey/issues/228.
 		fmt.Print("\033[?1l")
 	}

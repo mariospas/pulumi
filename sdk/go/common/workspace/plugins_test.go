@@ -292,7 +292,7 @@ func TestPluginDownload(t *testing.T) {
 		source := info.GetSource()
 		getHTTPResponse := func(req *http.Request) (io.ReadCloser, int64, error) {
 			assert.Equal(t,
-				"https://github.com/mariospas/pulumi-mockdl/releases/download/v4.32.0/"+
+				"https://github.com/pulumi/pulumi-mockdl/releases/download/v4.32.0/"+
 					"pulumi-resource-mockdl-v4.32.0-darwin-amd64.tar.gz",
 				req.URL.String())
 			return newMockReadCloser([]byte{})
@@ -311,7 +311,7 @@ func TestPluginDownload(t *testing.T) {
 		source := info.GetSource()
 		getHTTPResponse := func(req *http.Request) (io.ReadCloser, int64, error) {
 			// Test that the asset isn't on github
-			if req.URL.String() == "https://github.com/mariospas/pulumi-mockdl/releases/"+
+			if req.URL.String() == "https://github.com/pulumi/pulumi-mockdl/releases/"+
 				"download/v4.32.0/pulumi-resource-mockdl-v4.32.0-darwin-amd64.tar.gz" {
 				return nil, -1, errors.New("404 not found")
 			}
@@ -361,7 +361,7 @@ func TestPluginDownload(t *testing.T) {
 		source := info.GetSource()
 		getHTTPResponse := func(req *http.Request) (io.ReadCloser, int64, error) {
 			// Test that the asset isn't on github
-			if req.URL.String() == "https://github.com/mariospas/pulumi-private/releases/download/"+
+			if req.URL.String() == "https://github.com/pulumi/pulumi-private/releases/download/"+
 				"v1.22.0/pulumi-resource-private-v1.22.0-darwin-amd64.tar.gz" {
 				return nil, -1, errors.New("404 not found")
 			}

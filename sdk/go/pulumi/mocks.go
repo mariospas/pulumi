@@ -9,10 +9,10 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/plugin"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 type MockResourceMonitor interface {

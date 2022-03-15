@@ -19,8 +19,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/plugin"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -38,7 +38,7 @@ func TestGetPlugin(t *testing.T) {
 		{
 			Name: "valid-pulumi-mod",
 			Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi-aws/sdk",
+				Path:    "github.com/pulumi/pulumi-aws/sdk",
 				Version: "v1.29.0",
 			},
 			Expected: &pulumirpc.PluginDependency{
@@ -49,7 +49,7 @@ func TestGetPlugin(t *testing.T) {
 		{
 			Name: "pulumi-pseduo-version-plugin",
 			Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi-aws/sdk",
+				Path:    "github.com/pulumi/pulumi-aws/sdk",
 				Version: "v1.29.1-0.20200403140640-efb5e2a48a86",
 			},
 			Expected: &pulumirpc.PluginDependency{
@@ -68,7 +68,7 @@ func TestGetPlugin(t *testing.T) {
 		{
 			Name: "invalid-version-module",
 			Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi-aws/sdk",
+				Path:    "github.com/pulumi/pulumi-aws/sdk",
 				Version: "42-42-42",
 			},
 			ShouldErr: true,
@@ -76,7 +76,7 @@ func TestGetPlugin(t *testing.T) {
 		{
 			Name: "pulumi-pulumi-mod",
 			Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi/sdk",
+				Path:    "github.com/pulumi/pulumi/sdk",
 				Version: "v1.14.0",
 			},
 			ShouldErr: true,
@@ -84,7 +84,7 @@ func TestGetPlugin(t *testing.T) {
 		{
 			Name: "beta-pulumi-module",
 			Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi-aws/sdk",
+				Path:    "github.com/pulumi/pulumi-aws/sdk",
 				Version: "v2.0.0-beta.1",
 			},
 			Expected: &pulumirpc.PluginDependency{
@@ -94,7 +94,7 @@ func TestGetPlugin(t *testing.T) {
 		},
 		{
 			Name: "non-zero-patch-module", Mod: &modInfo{
-				Path:    "github.com/mariospas/pulumi-kubernetes/sdk",
+				Path:    "github.com/pulumi/pulumi-kubernetes/sdk",
 				Version: "v1.5.8",
 			},
 			Expected: &pulumirpc.PluginDependency{

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/resources.json",
+    "$id": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/resources.json",
     "title": "Pulumi Resource State",
     "description": "Schemas for Pulumi resource states.",
     "oneOf": [
@@ -43,14 +43,14 @@
                     "description": "The input properties supplied to the provider.",
                     "type": "object",
                     "additionalProperties": {
-                        "$ref": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
+                        "$ref": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
                     }
                 },
                 "outputs": {
                     "description": "The output properties returned by the provider after provisioning.",
                     "type": "object",
                     "additionalProperties": {
-                        "$ref": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
+                        "$ref": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/property-values.json"
                     }
                 },
                 "parent": {

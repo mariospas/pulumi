@@ -23,9 +23,9 @@ import (
 	"github.com/blang/semver"
 	"golang.org/x/net/context"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
 func mapStructTypes(from, to reflect.Type) func(reflect.Value, int) (reflect.StructField, reflect.Value) {

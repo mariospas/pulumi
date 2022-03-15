@@ -26,8 +26,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/tools"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/fsutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tools"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/stretchr/testify/assert"
 )
 

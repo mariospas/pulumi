@@ -19,7 +19,7 @@ import (
 	"context"
 	_ "unsafe" // unsafe is needed to use go:linkname
 
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 
 	"google.golang.org/grpc"
 )
@@ -28,49 +28,49 @@ import (
 // functionality in this package for their implementations. To achieve this, go:linkname is used to make the following
 // functions available in the provider package.
 
-//go:linkname linkedConstruct github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedConstruct
+//go:linkname linkedConstruct github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedConstruct
 func linkedConstruct(ctx context.Context, req *pulumirpc.ConstructRequest, engineConn *grpc.ClientConn,
 	constructF constructFunc) (*pulumirpc.ConstructResponse, error) {
 	return construct(ctx, req, engineConn, constructF)
 }
 
-//go:linkname linkedConstructInputsMap github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedConstructInputsMap
+//go:linkname linkedConstructInputsMap github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedConstructInputsMap
 func linkedConstructInputsMap(ctx *Context, inputs map[string]interface{}) (Map, error) {
 	return constructInputsMap(ctx, inputs)
 }
 
-//go:linkname linkedConstructInputsCopyTo github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedConstructInputsCopyTo
+//go:linkname linkedConstructInputsCopyTo github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedConstructInputsCopyTo
 func linkedConstructInputsCopyTo(ctx *Context, inputs map[string]interface{}, args interface{}) error {
 	return constructInputsCopyTo(ctx, inputs, args)
 }
 
-//go:linkname linkedNewConstructResult github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedNewConstructResult
+//go:linkname linkedNewConstructResult github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedNewConstructResult
 func linkedNewConstructResult(resource ComponentResource) (URNInput, Input, error) {
 	return newConstructResult(resource)
 }
 
-//go:linkname linkedCall github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedCall
+//go:linkname linkedCall github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedCall
 func linkedCall(ctx context.Context, req *pulumirpc.CallRequest, engineConn *grpc.ClientConn,
 	callF callFunc) (*pulumirpc.CallResponse, error) {
 	return call(ctx, req, engineConn, callF)
 }
 
-//go:linkname linkedCallArgsCopyTo github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedCallArgsCopyTo
+//go:linkname linkedCallArgsCopyTo github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedCallArgsCopyTo
 func linkedCallArgsCopyTo(ctx *Context, source map[string]interface{}, args interface{}) (Resource, error) {
 	return callArgsCopyTo(ctx, source, args)
 }
 
-//go:linkname linkedCallArgsSelf github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedCallArgsSelf
+//go:linkname linkedCallArgsSelf github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedCallArgsSelf
 func linkedCallArgsSelf(ctx *Context, source map[string]interface{}) (Resource, error) {
 	return callArgsSelf(ctx, source)
 }
 
-//go:linkname linkedNewCallResult github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedNewCallResult
+//go:linkname linkedNewCallResult github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedNewCallResult
 func linkedNewCallResult(result interface{}) (Input, error) {
 	return newCallResult(result)
 }
 
-//go:linkname linkedNewCallFailure github.com/mariospas/pulumi/sdk/v3/go/pulumi/provider.linkedNewCallFailure
+//go:linkname linkedNewCallFailure github.com/pulumi/pulumi/sdk/v3/go/pulumi/provider.linkedNewCallFailure
 func linkedNewCallFailure(property, reason string) interface{} {
 	return newCallFailure(property, reason)
 }

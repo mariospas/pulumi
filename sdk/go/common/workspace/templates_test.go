@@ -155,14 +155,14 @@ func TestRetrieveHttpsTemplate(t *testing.T) {
 		{
 			testName:        "TemplateKindPulumiProject",
 			templateKind:    TemplateKindPulumiProject,
-			templateURL:     "https://github.com/mariospas/pulumi/tree/test-examples/examples/minimal",
+			templateURL:     "https://github.com/pulumi/pulumi/tree/test-examples/examples/minimal",
 			yamlFile:        "Pulumi.yaml",
 			expectedSubPath: []string{"examples", "minimal"},
 		},
 		{
 			testName:        "TemplateKindPolicyPack",
 			templateKind:    TemplateKindPolicyPack,
-			templateURL:     "https://github.com/mariospas/pulumi/tree/test-examples/examples/policy-packs/aws-ts-advanced",
+			templateURL:     "https://github.com/pulumi/pulumi/tree/test-examples/examples/policy-packs/aws-ts-advanced",
 			yamlFile:        "PulumiPolicy.yaml",
 			expectedSubPath: []string{"examples", "policy-packs", "aws-ts-advanced"},
 		},
@@ -209,7 +209,7 @@ func TestRetrieveHttpsTemplateOffline(t *testing.T) {
 		{
 			testName:     "TemplateKindPulumiProject",
 			templateKind: TemplateKindPulumiProject,
-			templateURL:  "https://github.com/mariospas/pulumi-aws/tree/master/examples/minimal",
+			templateURL:  "https://github.com/pulumi/pulumi-aws/tree/master/examples/minimal",
 		},
 		{
 			testName:     "TemplateKindPolicyPack",

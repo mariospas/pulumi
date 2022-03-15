@@ -28,13 +28,13 @@ import (
 
 	structpb "github.com/golang/protobuf/ptypes/struct"
 	multierror "github.com/hashicorp/go-multierror"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/plugin"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/cmdutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/logging"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/rpcutil"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
 )
 
@@ -948,7 +948,7 @@ func (ctx *Context) mergeProviders(t string, parent Resource, provider ProviderR
 		if _, alreadyExists := providerMap[pkg]; alreadyExists {
 			err := ctx.Log.Warn(fmt.Sprintf("Provider for %s conflicts with providers map. %s %s", pkg,
 				"This will become an error in july 2022.",
-				"See https://github.com/mariospas/pulumi/issues/8799 for more details.",
+				"See https://github.com/pulumi/pulumi/issues/8799 for more details.",
 			), nil)
 			if err != nil {
 				return nil, err

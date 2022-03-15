@@ -40,21 +40,6 @@ require (
 )
 
 require (
-	github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd // indirect
-	github.com/fatih/color v1.9.0 // indirect
-	github.com/gogo/protobuf v1.3.1 // indirect
-	github.com/google/go-cmp v0.4.1 // indirect
 	github.com/hashicorp/go-version v1.4.0
-	github.com/kr/pretty v0.2.1 // indirect
-	github.com/kr/text v0.2.0 // indirect
-	github.com/mattn/go-colorable v0.1.6 // indirect
-	github.com/mattn/go-runewidth v0.0.8 // indirect
-	github.com/opentracing/basictracer-go v1.0.0 // indirect
-	github.com/sergi/go-diff v1.1.0 // indirect
-	github.com/uber/jaeger-lib v2.2.0+incompatible // indirect
-	go.uber.org/atomic v1.6.0 // indirect
-	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
-	golang.org/x/tools v0.0.0-20200608174601-1b747fd94509 // indirect
-	google.golang.org/genproto v0.0.0-20200608115520-7c474a2e3482 // indirect
-	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect
+	github.com/pulumi/pulumi/sdk/v3 v3.26.1
 )

@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
-	"github.com/mariospas/pulumi/sdk/v3/python"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/python"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -100,7 +100,7 @@ func TestConcurrentUpdateError(t *testing.T) {
 func TestInlineConcurrentUpdateError(t *testing.T) {
 	t.Parallel()
 
-	t.Skip("disabled, see https://github.com/mariospas/pulumi/issues/5312")
+	t.Skip("disabled, see https://github.com/pulumi/pulumi/issues/5312")
 	ctx := context.Background()
 	pName := "inline_conflict_error"
 	sName := randomStackName()

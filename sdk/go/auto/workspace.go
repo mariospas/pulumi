@@ -17,11 +17,11 @@ package auto
 import (
 	"context"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/auto/optremove"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/apitype"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optremove"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/apitype"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 // Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.

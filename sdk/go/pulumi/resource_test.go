@@ -25,7 +25,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	grpc "google.golang.org/grpc"
 
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 type testRes struct {

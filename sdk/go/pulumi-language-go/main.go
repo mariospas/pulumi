@@ -33,16 +33,16 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/resource/plugin"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/buildutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/cmdutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/executable"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/goversion"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/logging"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/rpcutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/version"
-	"github.com/mariospas/pulumi/sdk/v3/go/pulumi"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/buildutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/goversion"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 func findProgram(binary string) (*exec.Cmd, error) {
@@ -204,7 +204,7 @@ func (m *modInfo) getPlugin() (*pulumirpc.PluginDependency, error) {
 		return nil, fmt.Errorf("Failed to load pulumi-plugin.json: %w", err)
 	}
 
-	if (!strings.HasPrefix(m.Path, "github.com/mariospas/pulumi-") && pulumiPlugin == nil) ||
+	if (!strings.HasPrefix(m.Path, "github.com/pulumi/pulumi-") && pulumiPlugin == nil) ||
 		(pulumiPlugin != nil && !pulumiPlugin.Resource) {
 		return nil, errors.New("module is not a pulumi provider")
 	}
@@ -213,7 +213,7 @@ func (m *modInfo) getPlugin() (*pulumirpc.PluginDependency, error) {
 	if pulumiPlugin != nil && pulumiPlugin.Name != "" {
 		name = pulumiPlugin.Name
 	} else {
-		// github.com/mariospas/pulumi-aws/sdk/... => aws
+		// github.com/pulumi/pulumi-aws/sdk/... => aws
 		pluginPart := strings.Split(m.Path, "/")[2]
 		name = strings.SplitN(pluginPart, "-", 2)[1]
 	}

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/mariospas/pulumi/blob/master/sdk/go/common/apitype/property-values.json",
+    "$id": "https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/property-values.json",
     "$anchor": "property_value",
     "title": "Pulumi Property Value",
     "description": "A schema for Pulumi Property values.",

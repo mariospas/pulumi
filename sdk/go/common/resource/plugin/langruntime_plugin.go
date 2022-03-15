@@ -24,13 +24,13 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 
-	"github.com/mariospas/pulumi/sdk/v3/go/common/tokens"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/cmdutil"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/logging"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/util/rpcutil/rpcerror"
-	"github.com/mariospas/pulumi/sdk/v3/go/common/workspace"
-	pulumirpc "github.com/mariospas/pulumi/sdk/v3/proto/go"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil/rpcerror"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 // langhost reflects a language host plugin, loaded dynamically for a single language/runtime pair.
